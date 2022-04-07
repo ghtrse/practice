@@ -26,7 +26,7 @@ const Movies = () => {
 
   useEffect(() => {
     fetchMovie();
-  }, [page,genreforURL]);
+  }, [fetchMovie]);
 
   return (
     <div>

@@ -18,7 +18,7 @@ const Trending = () => {
 
   useEffect(() => {
     fetchTrending();
-  }, [page]);
+  }, [fetchTrending]);
   return (
     <React.Fragment>
       <span className='pageTitle'>Trending</span>

@@ -35,7 +35,7 @@ const Search = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchSearch();
-  }, [type, page]);
+  }, [fetchSearch]);
 
   return (
     <div>
