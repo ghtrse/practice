@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.media {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: #282c34;
+  border-radius: 10px;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.media:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.contentModal__landscape {
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.contentModal__portrait {
+  display: none;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.tagline {
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.contentModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.contentModal::-webkit-scrollbar {
+  display: none;
+}
+
+.contentModal__about {
+  padding: 10px;
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-evenly;
+  font-weight: 300;
+}
+
+.contentModal__title {
+  height: 12%;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentModal__description {
+  display: flex;
+  height: 50%;
+  overflow-y: scroll;
+  padding: 10px;
+  border-radius: 20px;
+  scrollbar-width: thin; /* Firefox */
+  box-shadow: inset 0 0 5px #000000;
+  text-align: justify;
+}
+
+.contentModal__description::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 835px) {
+  .contentModal__landscape {
+    display: none;
+  }
+  .contentModal__portrait {
+    display: flex;
+    width: 38%;
+  }
+  .contentModal {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  .contentModal__about {
+    width: 58%;
+    padding: 0;
+    height: 100%;
+  }
+  .contentModal__title {
+    font-size: 3.5vw;
+  }
+  .contentModal__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contentModal__description {
+    display: flex;
+    height: 50%;
+    overflow-y: scroll;
+    padding: 15px;
+    border-radius: 20px;
+    scrollbar-width: thin; /* Firefox */
+    box-shadow: inset 0 0 5px #000000;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 550px) {
+  .media {
+    width: 46%;
+  }
+}
